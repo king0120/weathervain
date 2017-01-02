@@ -1,0 +1,30 @@
+@font-face{
+  font-family: 'Hellena Script';
+  src: url('Hellena Script.ttf') format('truetype'),
+       url('Hellena Script.otf') format('opentype')
+}
+
+.jumbotron{
+  display: flex;
+  flex-flow: column;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+}
+
+.hellena{
+  font-family: 'Hellena Script';
+  color: white;
+  text-shadow: 2px 2px 0px rgba(0,0,0,.8);
+  font-size: 5rem;
+}
+
+.button.is-primary{
+  margin-top: 20px;
+}
+
+.underButton{
+  color: #fff;
+  margin-top: 20px;
+  text-shadow: 1px 1px 0px rgba(0,0,0,.3);
+}
