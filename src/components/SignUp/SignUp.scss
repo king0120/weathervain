@@ -1,0 +1,176 @@
+ .signUp {
+   img {
+     transform: scale(1.3, 1.3);
+   }
+   .container {
+     background-color: rgba(29, 38, 46, 1);
+     color: white;
+     width: 35%;
+     height: 80%;
+     border: 3px solid rgba(29, 38, 46, .5);
+     border-radius: 2px;
+     .topCopy {
+       height: 30%;
+     }
+     .oAuth {
+       height: 20%;
+     }
+     .createAccount {
+       height: 50%;
+     }
+   }
+   h1,
+   h2 {
+     width: 90%;
+     margin: 10px auto;
+   }
+   h1 {
+     font-size: 1.5rem;
+     color: rgba(235, 25, 0, 1);
+     font-weight: 700;
+   }
+   h2 {
+     font-size: 1.25rem;
+   }
+   hr {
+     width: 90%;
+     margin: 30px;
+   }
+   .inputStyle {
+     width: 60%;
+     margin: 0 auto;
+     height: 30px;
+   }
+   .flexRow {
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     flex-direction: row;
+   }
+ }
+ 
+ .flex {
+   height: 100vh;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-around;
+   align-items: center;
+ }
+ 
+ // Colors
+ $onyx: #3E363F;
+ $cinnabar: #DD403A;
+ $cosmiclatte: #FFFCE8;
+ // Inputs
+ .Input {
+   display: flex;
+   width: 90%;
+   margin: 0 auto;
+   flex-direction: row-reverse;
+   border-bottom: 1px solid rgba($cosmiclatte, .1);
+   padding-bottom: 3px;
+   margin-bottom: 5px;
+   input {
+     // General styles
+     outline: none;
+     border: 0;
+     color: $cosmiclatte;
+     background: transparent;
+     flex: 1 0 auto;
+     font-size: 14px;
+     font-weight: 300;
+     // Animation triggers
+     &:focus~label {
+       opacity: 1;
+     }
+     // Icon abstractions
+     &[type='text'] {
+       ~label {
+         &::before {
+           content: "\f007";
+         }
+       }
+     }
+     &[type='email'] {
+       ~label {
+         &::before {
+           content: "\f1fa";
+         }
+       }
+     }
+     &[type='password'] {
+       ~label {
+         &::before {
+           content: "\f023";
+         }
+       }
+     }
+   }
+   label {
+     font-family: FontAwesome;
+     font-size: 15px;
+     opacity: .1;
+     transition: opacity .5s ease;
+     &::before {
+       align-items: center;
+       color: $cosmiclatte;
+       display: flex;
+       height: 30px;
+       justify-content: center;
+       width: 30px;
+     }
+   }
+ }
+ 
+ button {
+   align-items: center;
+   background: $cinnabar;
+   border: 0;
+   border-radius: 3px;
+   color: white;
+   display: flex;
+   width: 90%;
+   margin: 0 auto;
+   font-size: 13px;
+   font-weight: 500;
+   justify-content: center;
+   margin-top: 20px;
+   outline: none;
+   padding: 10px 9px 10px 11px;
+   text-transform: uppercase;
+   transition: transform .15s ease;
+   .fa {
+     font-size: 12px;
+     margin-left: auto;
+     position: relative;
+     top: 1px;
+   }
+   &:hover {
+     transform: scale(1.02);
+   }
+   &:active {
+     transform: scale(.99);
+   }
+ }
+
+.example-enter {
+  opacity: 0.01;
+  width: 0px;
+}
+
+.example-enter.example-enter-active {
+  opacity: 1;
+  width: 100px;
+  transition: 700ms;
+}
+
+.example-leave {
+  opacity: 1;
+  width: 100px;
+}
+
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  width: 0px;
+  transition: 700ms;
+}

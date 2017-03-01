@@ -6,6 +6,7 @@ import App from './App';
 import LandingPage from './components/LandingPage/LandingPage';
 import SignUp from './components/SignUp/SignUp';
 import SignUpPrefs from './components/SignUpPrefs/SignUpPrefs';
+import Profile from './components/Profile/Profile';
 
 const routes = (
   <Router history={browserHistory}>
@@ -13,6 +14,7 @@ const routes = (
       <IndexRoute component={LandingPage} />
       <Route path="signup" component={SignUp} />
       <Route path="signup/prefs" component={SignUpPrefs} />
+      <Route path="profile" component={Profile} />
     </Route>
   </Router>
 )

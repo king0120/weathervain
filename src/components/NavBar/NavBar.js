@@ -1,10 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router';
 
+require('./NavBar.scss');
+
 export default class NavBar extends React.Component{
     render(){
         return (
-            <nav className="nav">
+            <div className="nav">
                 <div className="nav-left">
                     <Link to="/" className="nav-item is-brand">
                         WeatherVain
@@ -16,7 +18,7 @@ export default class NavBar extends React.Component{
                     <Link href="#" className="nav-item">About Us</Link>
                     <Link to="/signup" className="nav-item">My Account</Link>
                 </div>
-            </nav>
+            </div>
         )
     }
 }
